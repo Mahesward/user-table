@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Amarante');
+
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #585858;
+}
+
+br {
+  display: block;
+  line-height: 1.6em;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-weight: bold;
+  line-height: 2rem;
+  margin-bottom: 10px;
+}
+
+/** page structure **/
+#wrapper {
+  width: 100%;
+  display: block;
+  background: #fff;
+  margin: 0 auto;
+}
+
+#keywords {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#keywords thead {
+  cursor: pointer;
+  background: #c9dff0;
+}
+#keywords thead tr th {
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+}
+#keywords thead tr th span {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp,
+#keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+#keywords tbody tr {
+  color: #555;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
+}
+
+.edit {
+  color: rgb(0, 162, 255);
+  background: #fff;
+  border-radius: 2px;
+  width: 4rem;
+  height: 1.75rem;
+  border-color: rgb(0, 162, 255);
+  border-radius: 5px;
+  border-width: 1.5px;
+}
+.edit:hover {
+  color: #fff;
+  background: rgb(103, 178, 222);
+  border-radius: 2px;
+  width: 4rem;
+  height: 1.75rem;
+  border-color: #fff;
+  border-radius: 5px;
+  border-width: 1.5px;
+  cursor: pointer;
+  cursor: pointer;
+}
+.delete {
+  color: rgb(255, 0, 0);
+  background: #fff;
+  border-radius: 2px;
+  width: 4rem;
+  height: 1.75rem;
+  border-color: rgb(255, 0, 0);
+  border-radius: 5px;
+  border-width: 1.5px;
+}
+.delete:hover {
+  color: #fff;
+  background: rgb(204, 49, 49);
+  border-radius: 2px;
+  width: 4rem;
+  height: 1.75rem;
+  border-color: rgb(203, 48, 48);
+  border-radius: 5px;
+  border-width: 1.5px;
+  cursor: pointer;
+}
