@@ -11,8 +11,8 @@ import './editForm.css';
 function EditForm() {
   const param = useParams();
   const dispatch = useDispatch();
-  let data = useSelector((state) => state.data.value);
-  data = data.filter((userData) => userData.id === Number(param.id))?.[0];
+  const userDataTable = useSelector((state) => state.data.value);
+  const data = userDataTable.filter((userData) => userData.id === Number(param.id))?.[0];
 
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
@@ -23,8 +23,11 @@ function EditForm() {
     validationSchema: formSchema,
     onSubmit: () => {
       toast.success('Form Submitted Successfully');
-      formik.values.id = data.length;
-      dispatch(addData([...data, formik.values]));
+      const newValue = userDataTable.map((user) => {
+        if (user.id === formik.values.id) return formik.values;
+        return user;
+      });
+      dispatch(addData(newValue));
     },
   });
 
